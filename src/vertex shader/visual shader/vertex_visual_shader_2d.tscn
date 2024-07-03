@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://benbdi3ludpbw"]
+
+[ext_resource type="Shader" uid="uid://d1y0digkxougm" path="res://src/vertex shader/visual shader/grass_shader.tres" id="1_uor8w"]
+[ext_resource type="Texture2D" uid="uid://bjvaqikg2k1j0" path="res://assets/grass-svgrepo-com.svg" id="2_yp4px"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e15hc"]
+shader = ExtResource("1_uor8w")
+
+[node name="VertexVisualShader2d" type="Node2D"]
+
+[node name="Grass-svgrepo-com" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_e15hc")
+position = Vector2(576, 285)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_yp4px")
