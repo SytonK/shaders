@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://btva7r0ys6cx6"]
+
+[ext_resource type="Texture2D" uid="uid://k8nomkuymgsr" path="res://assets/squer in squer.png" id="1_hqrgy"]
+[ext_resource type="Shader" uid="uid://buddgxmh1t1b" path="res://src/fragment shader/visual shader/color_replacment_shader.tres" id="1_if41w"]
+[ext_resource type="Script" path="res://src/fragment shader/visual shader/color_replacement.gd" id="3_64bqb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qltmv"]
+shader = ExtResource("1_if41w")
+shader_parameter/ReplacementColor = Color(1, 0.298039, 0.584314, 1)
+
+[node name="FragmentShader2d" type="Node2D"]
+
+[node name="SquerInSquer" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qltmv")
+position = Vector2(292, 357)
+texture = ExtResource("1_hqrgy")
+script = ExtResource("3_64bqb")
+
+[node name="SquerInSquer2" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(841, 365)
+texture = ExtResource("1_hqrgy")
+
+[node name="ColorPicker" type="ColorPicker" parent="."]
+offset_left = 423.0
+offset_top = 38.0
+offset_right = 721.0
+offset_bottom = 614.0
+color = Color(0.133333, 0.694118, 0.298039, 1)
+
+[connection signal="color_changed" from="ColorPicker" to="SquerInSquer" method="_on_color_picker_color_changed"]
