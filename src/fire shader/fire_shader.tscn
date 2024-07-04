@@ -7,6 +7,8 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8wj2j"]
 shader = ExtResource("1_yk3wv")
+shader_parameter/scroll_speed0 = Vector2(0.3, 0.3)
+shader_parameter/scroll_speed1 = Vector2(0.2, 0.2)
 shader_parameter/base_intensity = 0.0
 shader_parameter/intencity_factor = 1.0
 shader_parameter/noise_pattern = ExtResource("2_t57q0")
