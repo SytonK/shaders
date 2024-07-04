@@ -7,6 +7,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8wj2j"]
 shader = ExtResource("1_yk3wv")
+shader_parameter/base_intensity = 0.0
 shader_parameter/noise_pattern = ExtResource("2_t57q0")
 shader_parameter/tone_mapping = ExtResource("3_8po0o")
 
