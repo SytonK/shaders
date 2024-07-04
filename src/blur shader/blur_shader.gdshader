@@ -2,7 +2,7 @@ shader_type canvas_item;
 
 uniform float strength: hint_range(0, 8) = 0;
 
-vec4 blur_size(sampler2D tex,vec2 frag_coord, vec2 pixel_size, float blur_strength) {
+vec4 blur(sampler2D tex,vec2 frag_coord, vec2 pixel_size, float blur_strength) {
     
     vec4 color = vec4(0.);
 
@@ -29,5 +29,5 @@ vec4 blur_size(sampler2D tex,vec2 frag_coord, vec2 pixel_size, float blur_streng
 }
 
 void fragment() {
-    COLOR = blur_size(TEXTURE,UV,TEXTURE_PIXEL_SIZE, strength);
+    COLOR = blur(TEXTURE,UV,TEXTURE_PIXEL_SIZE, strength);
 }
