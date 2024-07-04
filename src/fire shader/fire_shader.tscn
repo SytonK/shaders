@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b6ce7koqq7c05"]
+[gd_scene load_steps=6 format=3 uid="uid://b6ce7koqq7c05"]
 
 [ext_resource type="Texture2D" uid="uid://b8l1e3eywarvx" path="res://icon.svg" id="1_87koh"]
 [ext_resource type="Shader" path="res://src/fire shader/fire_shader.gdshader" id="1_yk3wv"]
 [ext_resource type="Texture2D" uid="uid://wv7gnnmx3lf4" path="res://assets/fire pattern.png" id="2_t57q0"]
+[ext_resource type="Texture2D" uid="uid://dqe0laph062br" path="res://src/fire shader/fire_gradiant.tres" id="3_8po0o"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8wj2j"]
 shader = ExtResource("1_yk3wv")
 shader_parameter/noise_pattern = ExtResource("2_t57q0")
+shader_parameter/tone_mapping = ExtResource("3_8po0o")
 
 [node name="FireShader" type="Node2D"]
 
