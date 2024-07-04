@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6ce7koqq7c05"]
+
+[ext_resource type="Texture2D" uid="uid://b8l1e3eywarvx" path="res://icon.svg" id="1_87koh"]
+[ext_resource type="Shader" path="res://src/fire shader/fire_shader.gdshader" id="1_yk3wv"]
+[ext_resource type="Texture2D" uid="uid://wv7gnnmx3lf4" path="res://assets/fire pattern.png" id="2_t57q0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8wj2j"]
+shader = ExtResource("1_yk3wv")
+shader_parameter/noise_pattern = ExtResource("2_t57q0")
+
+[node name="FireShader" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_8wj2j")
+position = Vector2(601, 342)
+texture = ExtResource("1_87koh")
