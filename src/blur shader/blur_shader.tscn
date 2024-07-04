@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bs2v4o15b0otw"]
+
+[ext_resource type="Shader" path="res://src/blur shader/blur_shader.gdshader" id="1_5rldk"]
+[ext_resource type="Texture2D" uid="uid://b8l1e3eywarvx" path="res://icon.svg" id="1_dcotg"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wm3x6"]
+shader = ExtResource("1_5rldk")
+shader_parameter/strength = 4.045
+
+[node name="BlurShader" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_wm3x6")
+offset_right = 687.0
+offset_bottom = 327.0
+texture = ExtResource("1_dcotg")
