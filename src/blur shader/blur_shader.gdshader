@@ -7,10 +7,10 @@ vec4 blur_size(sampler2D tex,vec2 frag_coord, vec2 pixel_size, float blur_streng
     vec4 color = vec4(0.);
 
     vec2 pixel = frag_coord/pixel_size;
-    int x_min = max(int(pixel.x-strength), 0);
-    int x_max = min(int(pixel.x+strength), int(1./pixel_size.x));
-    int y_min = max(int(pixel.y-strength), 0);
-    int y_max = min(int(pixel.y+strength), int(1./pixel_size.y));
+    int x_min = max(int(pixel.x-blur_strength), 0);
+    int x_max = min(int(pixel.x+blur_strength), int(1./pixel_size.x));
+    int y_min = max(int(pixel.y-blur_strength), 0);
+    int y_max = min(int(pixel.y+blur_strength), int(1./pixel_size.y));
 
     int count =0;
 
