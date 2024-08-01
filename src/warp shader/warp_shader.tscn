@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwr4w33gosbfy"]
+
+[ext_resource type="Texture2D" uid="uid://b8l1e3eywarvx" path="res://icon.svg" id="1_fiw82"]
+[ext_resource type="Texture2D" uid="uid://wv7gnnmx3lf4" path="res://assets/fire pattern.png" id="1_vp601"]
+[ext_resource type="Shader" path="res://src/warp shader/warp.gdshader" id="1_xxyal"]
+
+[sub_resource type="Curve" id="Curve_vmqgn"]
+min_value = -1.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.175, -0.5), 0.0, 0.0, 0, 0, Vector2(0.3, 0.5), 0.0, 0.0, 0, 0, Vector2(0.475, 0.15), 0.0, 0.0, 0, 0, Vector2(0.50001, 0), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_8a5kg"]
+curve = SubResource("Curve_vmqgn")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f2kay"]
+shader = ExtResource("1_xxyal")
+shader_parameter/strength = 0.5
+shader_parameter/curve = SubResource("CurveTexture_8a5kg")
+
+[node name="WarpShader" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
+texture = ExtResource("1_vp601")
+
+[node name="Worp" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_f2kay")
+texture = ExtResource("1_fiw82")
